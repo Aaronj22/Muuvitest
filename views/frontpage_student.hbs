@@ -1,0 +1,32 @@
+<div class="left">
+    <h1 id="hrv_text">Viimeisin HRV-mittaus:</h1>
+    <img id="hrv_measurement" src="images/HRV_mittaus.png">
+    <h2>Viimeisen 7 päivän mittaustulokset:</h2>
+    <div id="student_hrv_chart"></div>
+    <a id="hrv_measurement_button" href="/hrv_mittaukset">Aikaisemmat mittaustulokset</a>
+</div>
+<div class="right">
+    <h1>Päivän aktiivisuus:</h1>
+    <h2>🤸🏼‍♀️8563 askelta</h2>
+    <img id="activity" src="images/aktiivisuuspampula.png">
+    <h1>Lisää uusi päiväkirjamerkintä:</h1>
+    <form action="/diaryEntries" method="post">
+        <label for="diary_date">Päivämäärä:</label>
+        <input type="date" id="diary_date" name="diary_date" required>
+        <textarea name="body" placeholder="Lisää tähän päivän mietteesi..."></textarea>
+        <div id="emojis">
+          <i class="emoji fa-regular fa-face-laugh-beam fa-3x"></i>
+          <i class="emoji fa-regular fa-face-smile-beam fa-3x"></i>
+          <i class="emoji fa-regular fa-face-grimace fa-3x"></i>
+          <i class="emoji fa-regular fa-face-frown-open fa-3x"></i>
+          <i class="emoji fa-regular fa-face-frown fa-3x"></i>
+        </div>
+        <input type="hidden" name="emojiClass" id="emojiClass">
+        <button id="diary_save" type="submit">Tallenna</button>
+    </form>
+</div>
+<div class="footer"></div>
+
+
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Etusivu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/student/frontpage_student.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3a9d2d734c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  </head>
+  <body>
+    <div class="grid-container">
+    {{> nav_student}}
+    {{{body}}}
+    </div>
+    <script src="/frontpage_student.js"></script>
+    <script src="/hrv_chart.js"></script>
+    <script src="/activities_and_diary_student.js"></script>
+    <script src="/diaryEntries.js"></script>
+  </body>
+</html>

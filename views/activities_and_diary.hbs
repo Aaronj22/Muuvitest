@@ -1,0 +1,77 @@
+<div class="main">
+  <div class="diary">
+      <h1>Lisää uusi päiväkirjamerkintä</h1>
+      <form action="/diaryEntries" method="post">
+        <label for="diary_date">Päivämäärä:</label>
+        <input type="date" id="diary_date" name="diary_date" required>
+        <textarea name="diary_date" value="Kerro sun fiilis! Enintään 200 merkkiä" minlength="1" maxlength="200"></textarea>
+        <div id="emojis">
+          <i class="emoji fa-regular fa-face-laugh-beam fa-3x"></i>
+          <i class="emoji fa-regular fa-face-smile-beam fa-3x"></i>
+          <i class="emoji fa-regular fa-face-grimace fa-3x"></i>
+          <i class="emoji fa-regular fa-face-frown-open fa-3x"></i>
+          <i class="emoji fa-regular fa-face-frown fa-3x"></i>
+        </div>
+        <input type="hidden" name="emojiClass" id="emojiClass">
+        <button id="diary_save" type="submit">Tallenna</button>
+      </form>
+  </div>
+  <div class="diary_history">
+    <h1>Tallennetut päiväkirjamerkinnät</h1>
+    <ul id="diary_entries">
+      {{#each diaryEntries}}
+      <li data-id="{{this._id}}">
+        {{this.diary_date}} - {{this.body}}
+        <span class="{{this.emojiClass}}"></span>
+      </li>
+      {{/each}}
+    </ul>
+    <button id="load-more">Load more</button>
+  </div>
+</div>
+<div class="footer"></div>
+
+{{!-- <div class="activities">
+  <h2>Aktiviteetit</h2>
+  <!-- You can add activity list items here -->
+</div>
+<div class="diary">
+  <h1>Lisää uusi päiväkirjamerkintä</h1>
+  <form action="/diaryEntries" method="post">
+    <label for="diary_date">Päivämäärä:</label>
+    <input type="date" id="diary_date" name="diary_date">
+    <textarea name="body" placeholder="Kerro sun fiilis!"></textarea>
+    <div id="emojis">
+        <i class="emoji fa-regular fa-face-laugh-beam fa-3x"></i>
+        <i class="emoji fa-regular fa-face-smile-beam fa-3x"></i>
+        <i class="emoji fa-regular fa-face-grimace fa-3x"></i>
+        <i class="emoji fa-regular fa-face-frown-open fa-3x"></i>
+        <i class="emoji fa-regular fa-face-frown fa-3x"></i>
+      </div>
+    </div>
+    <button id="diary_save" type="submit">Tallenna</button>
+  </form>
+  <div class="diary_history">
+    <h1>Tallennetut päiväkirjamerkinnät</h1>
+    {{#if stories}}
+      <ul id="diary_entries">
+        {{#each stories}}
+          <li>
+            <a href="/stories/{{_id}}">{{title}}</a> - {{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p>Et ole tallentanut päiväkirjaan vielä mitään!</p>
+    {{/if}}
+  </div>
+</div>
+<div class="footer"></d<div class="activities">
+    <h2>Aktiviteetit</h2>
+    <ul>
+      <li>Aktiviteetti 1 - Pyöräily</li>
+      <li>Aktiviteetti 2 - Kävely</li>
+      <li>Aktiviteetti 3 - Voimaharjoittelu</li>
+      <li>Aktiviteetti 4 - Kävely</li>
+    </ul>
+</div> --}}

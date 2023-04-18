@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+.items{
+    width: 100%;
+}
+
+.lista{
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+li{
+    background-color: rgb(205, 205, 205);
+    outline:solid 1px black;
+    padding: 12px;
+}
+
+#buttons{
+    display:inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1.2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    height: 50%;
+    border: 0;
+    border-radius: 18px;
+    text-decoration:none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight:700;
+    background-color: #FFEDD8;
+    text-align:center;
+    transition: all 0.15s;
+  }
+
+  #lisää{
+    float: right;
+  }
+
+  #valitse{
+    float: left;
+  }
+
+.grid-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'main main main right right right'
+      'footer footer footer footer footer footer';
+    row-gap: 1em;
+    background-color: white
+}
+
+
+.footer {
+    grid-area: footer;
+}
+
+
+#logo {
+    width: 150px;
+    height: 55px;
+}
+
+
+body button {
+    display:inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1.2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    height: 50%;
+    border: 0;
+    border-radius: 18px;
+    text-decoration:none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight:700;
+    background-color: #FFEDD8;
+    text-align:center;
+    transition: all 0.15s;
+}
+
+body button:hover{
+    color:#2EC4B6;
+    border-color:#2EC4B6;
+}
+
+body button:active{
+    color:#FF8055;
+    border-color:#FF8055;
+}
+
+.footer {
+    background-color:#2EC4B6;
+    margin-top: 5%;
+    width: 100%;
+    height: 6em;
+}
+
+@media only screen and (max-width: 1050px) {
+    .grid-container {
+        grid-template-areas: 
+        "header" "header"
+        "right" "right"
+        "main" "main"
+        "footer" "footer";
+    }
+
+    .oikea {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+    }
+}
